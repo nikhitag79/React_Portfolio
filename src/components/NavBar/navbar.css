@@ -46,3 +46,8 @@
     width: 1rem;
     margin: 1rem;
 }
+.active{
+    color: hwb(214 29% 7%);
+    border-bottom: 3px solid hwb(214 29% 7%);
+    padding-bottom: 0.5rem;
+}
