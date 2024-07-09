@@ -11,18 +11,22 @@
     top: 0;
     z-index: 3;
     max-width: 75rem;
-
 }
+
 .logo{
     object-fit: cover;
     height: 3rem;
     width:4rem;
 }
 
+.desktopMenu {
+    display: flex;
+    align-items: center;
+}
+
 .desktopMenuListItem{
     margin: 1rem;
     cursor: pointer;
-    
 }
 
 .desktopMenuListItem:hover{
@@ -30,6 +34,7 @@
     padding-bottom:0.5rem ;
     border-bottom: 3px solid hwb(214 29% 7%);
 }
+
 .desktopMenuBtn{
     background: white;
     color: black;
@@ -39,13 +44,17 @@
     justify-content: center;
     padding: 0 1rem;
     border-radius: 2rem;
+    margin-left: 1rem; /* Adjust this value as needed */
+    height: 2.5rem; /* Ensure it matches the nav bar height */
 }
+
 .desktopMenuImg{
     object-fit: cover;
     height: 1rem;
     width: 1rem;
-    margin: 1rem;
+    margin-right: 0.5rem; /* Adjust this value as needed */
 }
+
 .active{
     color: hwb(214 29% 7%);
     border-bottom: 3px solid hwb(214 29% 7%);

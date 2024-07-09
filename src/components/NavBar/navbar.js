@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link activateClass = 'active' to ='intro' spy={true} smoth = {true} offset = {-100} duration = {500} className='desktopMenuListItem'>Home </Link>
             <Link activateClass = 'active' to ='skills' spy={true} smoth = {true} offset = {-70} duration = {500}  Link className='desktopMenuListItem'> About</Link>
             <Link activateClass = 'active' to ='works' spy={true} smoth = {true} offset = {-50} duration = {500} Link className='desktopMenuListItem'> Portfolio</Link>
-            <Link activateClass = 'active' to ='clients' spy={true} smoth = {true} offset = {-50} duration = {500} Link className='desktopMenuListItem'> Clients</Link>
+            <Link activateClass = 'active' to ='clients' spy={true} smoth = {true} offset = {-50} duration = {500} Link className='desktopMenuListItem'> Contact</Link>
 
 
 

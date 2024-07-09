@@ -1,7 +1,7 @@
 #works {
     min-height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 60rem;
+    max-width: 75rem; /* Increase the max-width to allow more space */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,36 +9,65 @@
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
-
 }
-.worksTitle{
 
+.worksTitle {
     margin: 1rem 0;
     font-size: 3rem;
 }
+
 .worksDesc {
     font-weight: 300;
     font-size: 1rem;
-    max-width:45rem;
-
+    max-width: 45rem;
 }
-.worksImgs{
+
+.worksImgs {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    max-width: 65rem;
-    flex-wrap: wrap;
-
+    width: 100%;
+    flex-wrap: nowrap; /* Ensure images stay in one line */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
-.worksImg{
 
-    object-fit: cover;
-    height: 20rem;
+.worksImgContainer {
+    position: relative;
     margin: 0.5rem;
-
 }
-.workBtn{
+
+.worksImg {
+    object-fit: cover;
+    height: 20rem; /* Fixed height */
+    width: 20rem;  /* Fixed width */
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.worksImgContainer:hover .overlay {
+    opacity: 1;
+}
+
+.workBtn {
     padding: 0.5rem 2.5rem;
     border: none;
     background: white;
@@ -46,9 +75,10 @@
     font-size: 1rem;
     margin: 3rem 0;
 }
-@media screen and (max-width:585px) {
+
+@media screen and (max-width: 585px) {
     .worksImg {
         height: 48vw;
-        
+        width: 48vw; /* Maintain aspect ratio */
     }
 }

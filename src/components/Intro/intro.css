@@ -1,19 +1,10 @@
 #intro {
-    
     height: calc(100vh - 4rem);
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-}
-.bg{
-    position: absolute;
-    top:5rem;
-    right:0;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
 }
 .introContent {
     height: 100vh;
@@ -24,54 +15,104 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
 }
-.hello{
-    font-size:1.75rem;
+.hello {
+    font-size: 1.75rem;
     font-weight: 100;
-
 }
-.introName{
+.introName {
     color: hwb(214 29% 7%);
-
 }
-.introPara{
+.introPara {
     font-size: medium;
     font-weight: 200;
     letter-spacing: 1px;
 }
 
-.btn{
+.secondPara {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.btn {
     background: white;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
-
 }
-.btnImg{
+.btnImg {
     object-fit: cover;
-    margin:0 0.25rem;
-    height: 0.75rem
-
+    margin: 0 0.25rem;
+    height: 0.75rem;
 }
-@media screen and (max-width: 840px){
-    .bg{
-        right:-10vh;
-    }
-    .introContent{
-        font-size:10vh;
-    }
-    .hello{
-        font-size:4.5vh;
-    }
-
+.circles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-@media screen and (max-width: 480px){
-    .bg{
-        right:-20vh;
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1 {
+    width: 8rem;
+    height: 8rem;
+}
+.circle2 {
+    width: 12rem;
+    height: 12rem;
+}
+.circle3 {
+    width: 15rem;
+    height: 15rem;
+}
+.circle4 {
+    width: 8rem;
+    height: 8rem;
+}
+.circle5 {
+    width: 5.5rem;
+    height: 5.5rem;
+}
+@keyframes move1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, 20px); }
+}
+@keyframes move2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20px, -20px); }
+}
+@keyframes move3 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, -20px); }
+}
+@keyframes move4 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20px, 20px); }
+}
+@keyframes move5 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, 10px); }
+}
+@media screen and (max-width: 840px) {
+    .introContent {
+        font-size: 10vh;
     }
-
-
+    .hello {
+        font-size: 4.5vh;
+    }
+    .circles {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .introContent {
+        font-size: 8vh;
+    }
 }
